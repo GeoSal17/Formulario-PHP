@@ -50,24 +50,12 @@
 <body>
 
 <div class="container">
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $nombre = $_GET["nombre"] ?? "Usuario";
-        $apellido = $_GET["apellido"] ?? "Desconocido";
-        $edad = $_GET["edad"] ?? "No especificada";
-        $sexo = $_GET["sexo"] ?? "No especificado";
-        $estadoCivil = $_GET["marital-status"] ?? "No especificado";
-        $fechaNacimiento = $_GET["birthday"] ?? "No especificada";
-
-        echo "<h1>¡Bienvenido, <span class='highlight'>$nombre $apellido</span>!</h1>";
-        echo "<p class='info'>Edad: <span class='highlight'>$edad</span></p>";
-        echo "<p class='info'>Sexo: <span class='highlight'>$sexo</span></p>";
-        echo "<p class='info'>Estado civil: <span class='highlight'>$estadoCivil</span></p>";
-        echo "<p class='info'>Fecha de nacimiento: <span class='highlight'>$fechaNacimiento</span></p>";
-    } else {
-        echo "<p>Acceso no válido.</p>";
-    }
-    ?>
+    <h1>¡Bienvenido, <span class='highlight'><?php echo $_GET["nombre"]; echo $_GET["apellido"];?></span>!<br>
+    <p class='info'>Edad: <span class='highlight'><?php echo $_GET["edad"];?>/span></p>
+    <p class='info'>Sexo: <span class='highlight'><?php echo $_GET["sexo"];?></span></p>
+    <p class='info'>Estado civil: <span class='highlight'><?php echo $_GET["marital-status"];?></span></p>
+    <p class='info'>Fecha de nacimiento: <span class='highlight'><?php echo $_GET["birthday"];?></span></p>
+    
     <button class="btn" onclick="window.print()">Imprimir página</button>
 </div>
 
