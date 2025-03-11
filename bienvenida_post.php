@@ -50,24 +50,11 @@
 <body>
 
 <div class="container">
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre = $_POST["nombre"] ?? "Usuario";
-        $apellido = $_POST["apellido"] ?? "Desconocido";
-        $edad = $_POST["edad"] ?? "No especificada";
-        $sexo = $_POST["sexo"] ?? "No especificado";
-        $estadoCivil = $_POST["marital-status"] ?? "No especificado";
-        $fechaNacimiento = $_POST["birthday"] ?? "No especificada";
-
-        echo "<h1>¡Bienvenido, <span class='highlight'>$nombre $apellido</span>!</h1>";
-        echo "<p class='info'>Edad: <span class='highlight'>$edad</span></p>";
-        echo "<p class='info'>Sexo: <span class='highlight'>$sexo</span></p>";
-        echo "<p class='info'>Estado civil: <span class='highlight'>$estadoCivil</span></p>";
-        echo "<p class='info'>Fecha de nacimiento: <span class='highlight'>$fechaNacimiento</span></p>";
-    } else {
-        echo "<p>Acceso no válido.</p>";
-    }
-    ?>
+    <h1>¡Bienvenido, <span class='highlight'><?php echo $_POST["nombre"]; echo $_POST["apellido"];?></span>!<br>
+    <p class='info'>Edad: <span class='highlight'><?php echo $_POST["edad"];?>/span></p>
+    <p class='info'>Sexo: <span class='highlight'><?php echo $_POST["sexo"];?></span></p>
+    <p class='info'>Estado civil: <span class='highlight'><?php echo $_POST["marital-status"];?></span></p>
+    <p class='info'>Fecha de nacimiento: <span class='highlight'><?php echo $_POST["birthday"];?></span></p>
     <button class="btn" onclick="window.print()">Imprimir página</button>
 </div>
 
