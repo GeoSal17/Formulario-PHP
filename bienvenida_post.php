@@ -50,11 +50,12 @@
 <body>
 
 <div class="container">
-    <h1>¡Bienvenido, <span class='highlight'><?php echo $_POST["nombre"]; echo $_POST["apellido"];?></span>!<br>
-    <p class='info'>Edad: <span class='highlight'><?php echo $_POST["edad"];?>/span></p>
+    <h1>¡Bienvenido, <span class='highlight'><?php echo $_POST["nombre"];?>  <?php echo $_POST["apellido"];?></span>!<br>
+    <p class='info'>Edad: <span class='highlight'><?php echo $_POST["edad"];?></span></p>
     <p class='info'>Sexo: <span class='highlight'><?php echo $_POST["sexo"];?></span></p>
     <p class='info'>Estado civil: <span class='highlight'><?php echo $_POST["marital-status"];?></span></p>
     <p class='info'>Fecha de nacimiento: <span class='highlight'><?php echo $_POST["birthday"];?></span></p>
+
     <button class="btn" onclick="window.print()">Imprimir página</button>
 </div>
 
