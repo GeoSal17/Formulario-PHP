@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario GET</title>
+    <title>Formulario POST</title>
     <style>
         * {
             box-sizing: border-box;
@@ -48,8 +48,8 @@
     </style>
 </head>
 <body>
-    <h1>Formulario de envío (GET)</h1>
-    <form action="bienvenida_get.php" method="get">
+    <h1>Formulario de envío (POST)</h1>
+    <form action="bienvenida_post.php" method="post">
         <label for="nombre">Nombre(s):</label>
         <input type="text" id="nombre" name="nombre" required>
         <br><br>
