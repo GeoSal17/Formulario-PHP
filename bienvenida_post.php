@@ -52,17 +52,18 @@
 <div class="container">
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre1 = $_POST["nombre1"] ?? "Usuario 1";
-        $nombre2 = $_POST["nombre2"] ?? "Usuario 2";
-        $edad = $_POST["edad"] ?? 0;
-        $ciudad = $_POST["ciudad"] ?? "Desconocida";
+        $nombre = $_POST["nombre"] ?? "Usuario";
+        $apellido = $_POST["apellido"] ?? "Desconocido";
+        $edad = $_POST["edad"] ?? "No especificada";
+        $sexo = $_POST["sexo"] ?? "No especificado";
+        $estadoCivil = $_POST["marital-status"] ?? "No especificado";
+        $fechaNacimiento = $_POST["birthday"] ?? "No especificada";
 
-        // Condición: si la edad es 18 o más, muestra nombre1, si no, muestra nombre2
-        $nombreMostrar = ($edad >= 18) ? $nombre1 : $nombre2;
-
-        echo "<h1>¡Bienvenido, <span class='highlight'>$nombreMostrar</span>!</h1>";
+        echo "<h1>¡Bienvenido, <span class='highlight'>$nombre $apellido</span>!</h1>";
         echo "<p class='info'>Edad: <span class='highlight'>$edad</span></p>";
-        echo "<p class='info'>Ciudad: <span class='highlight'>$ciudad</span></p>";
+        echo "<p class='info'>Sexo: <span class='highlight'>$sexo</span></p>";
+        echo "<p class='info'>Estado civil: <span class='highlight'>$estadoCivil</span></p>";
+        echo "<p class='info'>Fecha de nacimiento: <span class='highlight'>$fechaNacimiento</span></p>";
     } else {
         echo "<p>Acceso no válido.</p>";
     }
