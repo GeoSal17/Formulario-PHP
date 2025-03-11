@@ -51,7 +51,7 @@
 
 <div class="container">
     <h1>¡Bienvenido, <span class='highlight'><?php echo $_GET["nombre"]; echo $_GET["apellido"];?></span>!<br>
-    <p class='info'>Edad: <span class='highlight'><?php echo $_GET["edad"];?>/span></p>
+    <p class='info'>Edad: <span class='highlight'><?php echo $_GET["edad"];?></span></p>
     <p class='info'>Sexo: <span class='highlight'><?php echo $_GET["sexo"];?></span></p>
     <p class='info'>Estado civil: <span class='highlight'><?php echo $_GET["marital-status"];?></span></p>
     <p class='info'>Fecha de nacimiento: <span class='highlight'><?php echo $_GET["birthday"];?></span></p>
