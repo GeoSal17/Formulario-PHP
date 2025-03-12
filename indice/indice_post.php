@@ -49,7 +49,7 @@
 </head>
 <body>
     <h1>Formulario de envío (POST)</h1>
-    <form action="bienvenida_post.php" method="post">
+    <form action="../bienvenida/bienvenida_post.php" method="post">
         <label for="nombre">Nombre(s):</label>
         <input type="text" id="nombre" name="nombre" required>
         <br><br>

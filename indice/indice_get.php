@@ -49,7 +49,7 @@
 </head>
 <body>
     <h1>Formulario de envío (GET)</h1>
-    <form action="./bienvenida/bienvenida_get.php" method="get">
+    <form action="../bienvenida/bienvenida_get.php" method="get">
         <label for="nombre">Nombre(s):</label>
         <input type="text" id="nombre" name="nombre" required>
         <br><br>
